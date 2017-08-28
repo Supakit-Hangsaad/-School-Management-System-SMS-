@@ -68,10 +68,6 @@ class Controller extends \Gcms\Controller
       }
       closedir($f);
     }
-    if ($card->count() == 0) {
-      // จำนวนสมาชิกทั้งหมด
-      self::renderCard($card, 'icon-users', 'Users', \Index\Member\Model::getCount(), 'Member list', 'index.php?module=member');
-    }
     // render card
     $dashboard = $section->add('div', array(
       'class' => 'dashboard'
